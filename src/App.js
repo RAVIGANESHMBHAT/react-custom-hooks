@@ -4,6 +4,7 @@ import CounterTwo from "./components/CounterTwo";
 import DocTitleOne from "./components/DocTitleOne";
 import DocTitleTwo from "./components/DocTitleTwo";
 import UserForm from "./components/UserForm";
+import { UseState } from "./components/UseState/UseState";
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
       {/* <CounterOne />
       <CounterTwo /> */}
 
-      <UserForm />
+      {/* <UserForm /> */}
+
+      <UseState />
     </div>
   );
 }
