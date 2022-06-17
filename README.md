@@ -36,3 +36,11 @@
 #### Current commit shows the problem of modifying the object and passing it into the set method. And also shows how to fix it by creating the copy of the Object and then pass it into set method so that the React finds change in reference of object and re-renders the component with the updated object value.
 
 #### Mutating an object or an array as state will not cause a re-render when used with the useState or useReducer hook. To re-render, make a copy of the existing state, modify as necessary and then pass the new state to the setter function or while returning from a reducer function.
+
+### Rendering in Parent and Child components
+
+#### For the first time, both parent and child components will be rendered. Next time, if the state value doesn't change, then both the components will not be re-rendered.
+#### After the first re-rendering of the components, because of some action if the state value doesn't change, then the only parent component will be re-rendered once for the safety mesaure ,but the child component will not be re-rendered.
+
+![image](https://user-images.githubusercontent.com/41186067/174302327-5e7ca3a4-0c24-4721-9f67-b1769b1c913d.png)
+
