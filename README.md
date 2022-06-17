@@ -7,7 +7,7 @@
 
 ## ReactJS Rendering
 
-#### Any console.log statement will be shown twice in the browser console if we wrap the <App/> inside <React.StrictMode> in the index.js file. it will happen only in development mode and not in production mode in order to detect any problems with your development code and warn you about them.
+#### Any console.log statement will be shown twice in the browser console(because of rendering the component twice) if we wrap the <App> inside <React.StrictMode> in the index.js file. it will happen only in development mode and not in production mode in order to detect any problems with your development code and warn you about them.
 
 #### Initial render
 ![image](https://user-images.githubusercontent.com/41186067/174240656-67cc0a65-2b23-4a82-b6c5-b3c0c3ff1f1e.png)
