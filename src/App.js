@@ -3,6 +3,7 @@ import CounterOne from "./components/CounterOne";
 import CounterTwo from "./components/CounterTwo";
 import DocTitleOne from "./components/DocTitleOne";
 import DocTitleTwo from "./components/DocTitleTwo";
+import { ArrayUseState } from "./components/Immutable State/ArrayUseState";
 import { ObjectUseState } from "./components/Immutable State/ObjectUseState";
 import { UseReducer } from "./components/UseReducer/UseReducer";
 import UserForm from "./components/UserForm";
@@ -22,7 +23,8 @@ function App() {
       {/* <UseState /> */}
       {/* <UseReducer /> */}
 
-      <ObjectUseState />
+      {/* <ObjectUseState /> */}
+      <ArrayUseState />
     </div>
   );
 }
