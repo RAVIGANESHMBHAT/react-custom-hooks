@@ -26,6 +26,6 @@
 ### Rendering w.r.t useReducer Hook
 
 #### useReducer re-rendering
-image.png
-image.png
-image.png
+![image](https://user-images.githubusercontent.com/41186067/174265234-c4462b0a-28ce-49e6-b19c-41627b0145a8.png)
+![image](https://user-images.githubusercontent.com/41186067/174265157-f50dea1f-037e-43b7-9a7d-2537ee17ab10.png)
+![image](https://user-images.githubusercontent.com/41186067/174265090-f19980c6-7ef4-4107-89be-72a643202759.png)
