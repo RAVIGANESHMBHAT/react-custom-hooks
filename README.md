@@ -22,3 +22,10 @@
 
 #### useState and Render
 ![image](https://user-images.githubusercontent.com/41186067/174248785-3fbb8168-7aac-4ef2-a7d1-069a968533f1.png)
+
+### Rendering w.r.t useReducer Hook
+
+#### useReducer re-rendering
+image.png
+image.png
+image.png
