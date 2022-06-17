@@ -5,6 +5,7 @@ import DocTitleOne from "./components/DocTitleOne";
 import DocTitleTwo from "./components/DocTitleTwo";
 import { ArrayUseState } from "./components/Immutable State/ArrayUseState";
 import { ObjectUseState } from "./components/Immutable State/ObjectUseState";
+import { ChildOne } from "./components/Optimization/ChildOne";
 import { ParentOne } from "./components/Optimization/ParentOne";
 import { Parent } from "./components/Parent Child/Parent";
 import { UseReducer } from "./components/UseReducer/UseReducer";
@@ -30,7 +31,9 @@ function App() {
 
       {/* <Parent /> */}
 
-      <ParentOne />
+      <ParentOne>
+        <ChildOne/>
+      </ParentOne>
     </div>
   );
 }
