@@ -29,3 +29,8 @@
 ![image](https://user-images.githubusercontent.com/41186067/174265234-c4462b0a-28ce-49e6-b19c-41627b0145a8.png)
 ![image](https://user-images.githubusercontent.com/41186067/174265157-f50dea1f-037e-43b7-9a7d-2537ee17ab10.png)
 ![image](https://user-images.githubusercontent.com/41186067/174265090-f19980c6-7ef4-4107-89be-72a643202759.png)
+
+### Rendering and State Immutability
+
+#### Usually React does not rerender the component when the new state is same as old state.
+#### Current commit shows the problem of modifying the object and passing it into the set method. And also shows how to fix it by creating the copy of the Object and then pass it into set method so that the React finds change in reference of object and re-renders the component with the updated object value.
