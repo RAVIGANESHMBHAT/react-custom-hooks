@@ -34,3 +34,5 @@
 
 #### Usually React does not rerender the component when the new state is same as old state.
 #### Current commit shows the problem of modifying the object and passing it into the set method. And also shows how to fix it by creating the copy of the Object and then pass it into set method so that the React finds change in reference of object and re-renders the component with the updated object value.
+
+#### Mutating an object or an array as state will not cause a re-render when used with the useState or useReducer hook. To re-render, make a copy of the existing state, modify as necessary and then pass the new state to the setter function or while returning from a reducer function.
