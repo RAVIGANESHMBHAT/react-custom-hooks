@@ -44,3 +44,6 @@
 
 ![image](https://user-images.githubusercontent.com/41186067/174302327-5e7ca3a4-0c24-4721-9f67-b1769b1c913d.png)
 
+### Prevent unnecessary renders
+
+#### When a parent component renders, React will recursively render all of it's child components. Sometimes, child component goes through the render phase but not through the commit phase(if none of the state values are changed in child component).
