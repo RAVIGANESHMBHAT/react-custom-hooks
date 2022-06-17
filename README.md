@@ -50,3 +50,5 @@
 
 #### In the current commit, we are not passing the ChildOne component as a child component rather we are passing it as a prop to the ParentOne component. Actually, we can modify the states but not the props. In the current commit, when the React prepares for re-rendering, it gets to know that the current state change is happening from the ParentOne component. But ChildOne is the prop of ParentOne and ParentOne doesn't have permission to modify the prop, ChildOne. So, React will only re-render the ParentOne component and uses the previously created ChildOne component itself.
 
+#### Current commit has  GrandParent component which uses the ParentOne component and the ParentOne component has the prop as ChildOne component. If the re-rendering happens because of state change in GrandParent component, now both ParentOne and ChildOne components will be re-rendered.
+
