@@ -79,3 +79,7 @@
 ### Incorrect memo with props reference
 
 #### In the current commit, the ChildFive is getting passed with a prop 'person' which is an object defined in ParentFour. Even if the ChildFive is wrapped with React.memo, when the ParentFour re-renders, the ChildFive will also be re-rendered since, the person object passed as prop to ChildFive is created with a new reference when the ParentFour gets re-rendered. So, React thinks that the person object is pudated and it will re-render the ChildFive component which is using the person object.
+
+### Optimize re-render of child component using useMemo, useCallback hooks
+
+#### Current commit has the optimization while re-rendering the components. Create the memoized object from the object using useMemo hook which will prevent unnecessary re-render which happens because of passing object as props to child components. Memoize the function by using useCallback which will prevent the unnecessary re-render of child component which happens because of passing function as props to child components. 
