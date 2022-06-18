@@ -56,3 +56,14 @@
 
 #### Wrapping the Component in React.memo() while exporting will make the component to re-render only if it's props are changed. React does the shallow comparision of old and new values. Custom compare function can be passed as thye second argument to React.memo()
 
+## When to use Same Element Reference technique and when to use React.memo() ?
+
+|Same Element reference | React.memo |
+|------------------------|-----------|
+|When your parent component re-renders because of state change in parent component |When your child component is being asked to re-render due to changes in the parent's state which do not affect the child component props in anyways| 
+|This technique does not work if the parent component re-renders because of chnages in its props | |
+|state changes? YES, props changes? NO | |
+
+## If React.memo does optimized re-rendering, why can't we use it for all the components?
+
+#### It does the shallow comparision of values. Shallow comparisions aren't free. Ther are O(prop count). Common scenario is there will be always change in the props of components. SO, it is unnecessary to compare for the props (take 2 ms for say) and then re-render the component (take 10 ms for say). So, all the time it will take 12 ms if we use the React.memo unnecessarily. So, use it only wherever it is necessary.
