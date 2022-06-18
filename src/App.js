@@ -8,6 +8,7 @@ import { ObjectUseState } from "./components/Immutable State/ObjectUseState";
 import { ChildOne } from "./components/Optimization/ChildOne";
 import { GrandParent } from "./components/Optimization/GrandParent";
 import { ParentOne } from "./components/Optimization/ParentOne";
+import { ParentTwo } from "./components/Optimization/ParentTwo";
 import { Parent } from "./components/Parent Child/Parent";
 import { UseReducer } from "./components/UseReducer/UseReducer";
 import UserForm from "./components/UserForm";
@@ -35,7 +36,9 @@ function App() {
       {/* <ParentOne>
         <ChildOne/>
       </ParentOne> */}
-      <GrandParent/>
+      {/* <GrandParent/> */}
+
+      <ParentTwo />
     </div>
   );
 }

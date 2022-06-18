@@ -52,3 +52,7 @@
 
 #### Current commit has  GrandParent component which uses the ParentOne component and the ParentOne component has the prop as ChildOne component. If the re-rendering happens because of state change in GrandParent component, now both ParentOne and ChildOne components will be re-rendered.
 
+## React memo
+
+#### Wrapping the Component in React.memo() while exporting will make the component to re-render only if it's state / props are changed. React does the shallow comparision of old and new values. Custom compare function can be passed as thye second argument to React.memo()
+
