@@ -75,3 +75,7 @@
 ### Incorrect memo with impure components
 
 #### Impure component means, the component where JSX can change even though the props are not changed. (Eg: Update current time on screen)
+
+### Incorrect memo with props reference
+
+#### In the current commit, the ChildFive is getting passed with a prop 'person' which is an object defined in ParentFour. Even if the ChildFive is wrapped with React.memo, when the ParentFour re-renders, the ChildFive will also be re-rendered since, the person object passed as prop to ChildFive is created with a new reference when the ParentFour gets re-rendered. So, React thinks that the person object is pudated and it will re-render the ChildFive component which is using the person object.
