@@ -11,6 +11,8 @@ export const ChildA =  () => {
     );
 }
 
+export const MemoizedChildA = React.memo(ChildA);
+
 export const ChildB = () => {
     console.log("Child B render...")
     return (
@@ -20,6 +22,7 @@ export const ChildB = () => {
         </>
     )
 }
+
 
 export const ChildC = () => {
     const count = useContext(CountContext)

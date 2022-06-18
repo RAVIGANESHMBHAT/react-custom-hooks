@@ -94,3 +94,6 @@
 ### Context and render
 
 #### If the context provider receives a new value, then the components consuming the context value will also get updated. In current commit, whenContextParent gets new value, the ChildC component inside ContextChildren.js will also get re-rendered. But along with that the ChildA and ChildB also get re-rendered. It is because, when the parent component re-rendered, all its child components will be sequencially re-rendered. The current commit doesn't have a good context performance.
+
+### Context and memo
+#### ...
