@@ -1,4 +1,5 @@
 import "./App.css";
+import { ContextParent } from "./components/Context/ContextParent";
 import CounterOne from "./components/CounterOne";
 import CounterTwo from "./components/CounterTwo";
 import DocTitleOne from "./components/DocTitleOne";
@@ -44,7 +45,9 @@ function App() {
 
       {/* <ParentThree /> */}
 
-      <ParentFour />
+      {/* <ParentFour /> */}
+
+      <ContextParent />
     </div>
   );
 }
