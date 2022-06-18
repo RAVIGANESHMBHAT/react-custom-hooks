@@ -48,11 +48,11 @@
 
 #### When a parent component renders, React will recursively render all of it's child components. Sometimes, child component goes through the render phase but not through the commit phase(if none of the state values are changed in child component).
 
-#### In the current commit, we are not passing the ChildOne component as a child component rather we are passing it as a prop to the ParentOne component. Actually, we can modify the states but not the props. In the current commit, when the React prepares for re-rendering, it gets to know that the current state change is happening from the ParentOne component. But ChildOne is the prop of ParentOne and ParentOne doesn't have permission to modify the prop, ChildOne. So, React will only re-render the ParentOne component and uses the previously created ChildOne component itself.
+#### In the current commit, we are not passing the ChildOne component as a child component rather we are passing it as a prop to the ParentOne component. Actually, we can modify the states but not the props. In the current commit, when the React prepares for re-rendering, it gets to know that the current state change is happening from the ParentOne component. But ChildOne is the prop of ParentOne and ParentOne doesn't have permission to modify the prop, ChildOne. So, React will only re-render the ParentOne component and uses the previously created ChildOne component itself. (This technique is called as Same Element Reference technique)
 
 #### Current commit has  GrandParent component which uses the ParentOne component and the ParentOne component has the prop as ChildOne component. If the re-rendering happens because of state change in GrandParent component, now both ParentOne and ChildOne components will be re-rendered.
 
 ## React memo
 
-#### Wrapping the Component in React.memo() while exporting will make the component to re-render only if it's state / props are changed. React does the shallow comparision of old and new values. Custom compare function can be passed as thye second argument to React.memo()
+#### Wrapping the Component in React.memo() while exporting will make the component to re-render only if it's props are changed. React does the shallow comparision of old and new values. Custom compare function can be passed as thye second argument to React.memo()
 
