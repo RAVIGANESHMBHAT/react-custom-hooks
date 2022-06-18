@@ -71,3 +71,7 @@
 ## Incorrect memoization with children props
 
 #### In the current commit, we have the ChildThree component which takes the children as props. So, it is unnecessary to export the ChildThree with React.memo since the children.prop itself is a new reference and the React will anyhow re-render the ChildThree component.
+
+## Incorrect memo with impure components
+
+#### Impure component means, the component where JSX can change even though the props are not changed. (Eg: Update current time on screen)
