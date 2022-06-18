@@ -56,7 +56,7 @@
 
 #### Wrapping the Component in React.memo() while exporting will make the component to re-render only if it's props are changed. React does the shallow comparision of old and new values. Custom compare function can be passed as thye second argument to React.memo()
 
-## When to use Same Element Reference technique and when to use React.memo() ?
+### When to use Same Element Reference technique and when to use React.memo() ?
 
 |Same Element Reference | React.memo |
 |------------------------|-----------|
@@ -64,14 +64,14 @@
 |This technique does not work if the parent component re-renders because of chnages in its props | |
 |state changes? YES, props changes? NO | |
 
-## If React.memo does optimized re-rendering, why can't we use it for all the components?
+### If React.memo does optimized re-rendering, why can't we use it for all the components?
 
 #### It does the shallow comparision of values. Shallow comparisions aren't free. Ther are O(prop count). Common scenario is there will be always change in the props of components. SO, it is unnecessary to compare for the props (take 2 ms for say) and then re-render the component (take 10 ms for say). So, all the time it will take 12 ms if we use the React.memo unnecessarily. So, use it only wherever it is necessary.
 
-## Incorrect memoization with children props
+### Incorrect memoization with children props
 
 #### In the current commit, we have the ChildThree component which takes the children as props. So, it is unnecessary to export the ChildThree with React.memo since the children.prop itself is a new reference and the React will anyhow re-render the ChildThree component.
 
-## Incorrect memo with impure components
+### Incorrect memo with impure components
 
 #### Impure component means, the component where JSX can change even though the props are not changed. (Eg: Update current time on screen)
