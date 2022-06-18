@@ -5,6 +5,7 @@ import DocTitleOne from "./components/DocTitleOne";
 import DocTitleTwo from "./components/DocTitleTwo";
 import { ArrayUseState } from "./components/Immutable State/ArrayUseState";
 import { ObjectUseState } from "./components/Immutable State/ObjectUseState";
+import { ParentThree } from "./components/Incorrect Optimization/ParentThree";
 import { ChildOne } from "./components/Optimization/ChildOne";
 import { GrandParent } from "./components/Optimization/GrandParent";
 import { ParentOne } from "./components/Optimization/ParentOne";
@@ -38,7 +39,9 @@ function App() {
       </ParentOne> */}
       {/* <GrandParent/> */}
 
-      <ParentTwo />
+      {/* <ParentTwo /> */}
+
+      <ParentThree />
     </div>
   );
 }

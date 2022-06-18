@@ -58,7 +58,7 @@
 
 ## When to use Same Element Reference technique and when to use React.memo() ?
 
-|Same Element reference | React.memo |
+|Same Element Reference | React.memo |
 |------------------------|-----------|
 |When your parent component re-renders because of state change in parent component |When your child component is being asked to re-render due to changes in the parent's state which do not affect the child component props in anyways| 
 |This technique does not work if the parent component re-renders because of chnages in its props | |
@@ -67,3 +67,7 @@
 ## If React.memo does optimized re-rendering, why can't we use it for all the components?
 
 #### It does the shallow comparision of values. Shallow comparisions aren't free. Ther are O(prop count). Common scenario is there will be always change in the props of components. SO, it is unnecessary to compare for the props (take 2 ms for say) and then re-render the component (take 10 ms for say). So, all the time it will take 12 ms if we use the React.memo unnecessarily. So, use it only wherever it is necessary.
+
+## Incorrect memoization with children props
+
+#### In the current commit, we have the ChildThree component which takes the children as props. So, it is unnecessary to export the ChildThree with React.memo since the children.prop itself is a new reference and the React will anyhow re-render the ChildThree component.
